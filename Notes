@@ -1,0 +1,25 @@
+nodemon app.js --ext js,hbs        //running the nodemon for multiple extension files
+
+
+------------QUERY STRING in URL ----------------------
+
+http://weather?search=games&place=delhi
+
+These are only Key value pair
+
+
+res.query = {'search'='games','place':'delhi'}
+
+
+------------PARAMETERS IN URL ------------------------
+
+http://weather/:id       //in code
+
+http://weather/2342       //in browser
+
+
+res.params = {'id':2342}
+
+
+
+for multiple res.send() we use generally the return keyword to avoid the error in back-end

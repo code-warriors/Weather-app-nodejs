@@ -52,6 +52,30 @@ app.get('/help/*',(req,res)=>{
     });
 })
 
+
+app.get('/query/:id',(req,res)=>{
+    if(req.query.search)
+    {
+        console.log(req.query);
+        console.log(req.params);
+        res.send({
+            search:req.query.search
+        })
+    }
+    else
+    {
+        res.send({
+            errorMsg:"U must have to provide the search place"
+        })
+    }
+    
+})
+
+
+app.get('/product',(req,res)=>{
+    console.log(req.query);
+})
+
 app.get('*',(req,res)=>{
     res.status(404);
     res.render('pageNotFound',{
