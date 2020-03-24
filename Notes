@@ -23,3 +23,10 @@ res.params = {'id':2342}
 
 
 for multiple res.send() we use generally the return keyword to avoid the error in back-end
+
+
+
+for checking the ssk key 
+        ls -a -l ~/.ssh
+
+ssh-keygen -t rsa -b 4096 -C "pawnbisht83@gmail.com"        

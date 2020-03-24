@@ -53,21 +53,32 @@ app.get('/help/*',(req,res)=>{
 })
 
 
+app.get('/address',(req,res)=>{
+    if(!req.query.address)
+    {
+        return res.send({
+            errorMessage:"You must have provide the address value"
+        })
+    }
+    res.send({
+        address:req.query.address
+    })
+})
+
+
 app.get('/query/:id',(req,res)=>{
     if(req.query.search)
     {
         console.log(req.query);
         console.log(req.params);
-        res.send({
+        return res.send({
             search:req.query.search
         })
     }
-    else
-    {
         res.send({
             errorMsg:"U must have to provide the search place"
         })
-    }
+    
     
 })
 
