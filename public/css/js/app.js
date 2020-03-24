@@ -1,4 +1,4 @@
-fetch("http:URL",(response)=>{
+fetch("/weather",(response)=>{
     response.json().then((data)=>{
         if( data.error)
         {

@@ -95,8 +95,15 @@ app.get('*',(req,res)=>{
     });
 })
 
+app.get('/weather',(req,res)=>{
+    res.send({
+        longitude:2345,
+        latitude:2313
+    })
+})
 
 //Setup the server
-app.listen('3000',()=>{
-    console.log("Server Running at : 3000")
+const port = process.env.PORT || 3000;
+app.listen(port,()=>{
+    console.log("Server Running at : " + port);
 })
