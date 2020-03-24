@@ -30,3 +30,14 @@ for checking the ssk key
         ls -a -l ~/.ssh
 
 ssh-keygen -t rsa -b 4096 -C "pawnbisht83@gmail.com"        
+
+
+# start the ssh-agent in the background
+$ eval $(ssh-agent -s)
+> Agent pid 59566
+
+
+$ ssh-add ~/.ssh/id_rsa
+
+clip < ~/.ssh/id_rsa.pub
+Copies the contents of the id_rsa.pub file to your clipboard
