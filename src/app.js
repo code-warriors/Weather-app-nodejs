@@ -86,6 +86,12 @@ app.get('/query/:id',(req,res)=>{
 app.get('/product',(req,res)=>{
     console.log(req.query);
 })
+app.get('/weather',(req,res)=>{
+    res.send({
+        longitude:2345,
+        latitude:2313
+    })
+})
 
 app.get('*',(req,res)=>{
     res.status(404);
@@ -95,12 +101,7 @@ app.get('*',(req,res)=>{
     });
 })
 
-app.get('/weather',(req,res)=>{
-    res.send({
-        longitude:2345,
-        latitude:2313
-    })
-})
+
 
 //Setup the server
 const port = process.env.PORT || 3000;
