@@ -41,3 +41,29 @@ $ ssh-add ~/.ssh/id_rsa
 
 clip < ~/.ssh/id_rsa.pub
 Copies the contents of the id_rsa.pub file to your clipboard
+
+
+---------------------------HEROKU CLI------------------------
+
+heroku keys:add
+heroku create pawan-demo-express
+
+We have to also specify the starting point where the application is starting.
+To do that we have to specify it in the script tag in package.json
+        So heroku runs a command 
+npm run start          //That tell that run the start script cmd specified in packge.json 
+
+
+
+we need to also pass the basic information to our app
+
+--------------------------DEPLOYEMENT------------------------
+
+any changes that occur in main project should be reflected to our deployed application
+So we need to do several steps;
+        git remote                              //to check the remaote server
+1, firstly to push our code to github 
+2, git push heroku master
+3, 
+
+
