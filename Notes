@@ -54,6 +54,23 @@ To do that we have to specify it in the script tag in package.json
 npm run start          //That tell that run the start script cmd specified in packge.json 
 
 
+----------------------------FOR DEVELOPEMNT---------------------------
+
+in package.json 
+script tag have a property called
+"dev":"nodemon src/app.js -e js,hbs
+
+
+npm run dev
+
+we have to generally use the local dev dependencies instead of global dependencies
+i,e we have to install the nodemon as the local dependency.
+ by Using 
+ npm i  nodemon --save -dev
+        devDependencies :{nodemon:"2.0.2"}
+        In this devDependencies only dependencies that you only need for local machine.
+        Well thase dependencies aren't install in production environment
+
 
 we need to also pass the basic information to our app
 
